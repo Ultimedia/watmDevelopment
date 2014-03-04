@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>We App To Move</title>
+    <link rel="stylesheet" type="text/css" href="public/css/clank.css" />
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
+    <script type="text/javascript" charset="utf-8" src="dev/vendor/camera.js"></script>
+
+
+      <script>
+        if (navigator.userAgent.toLowerCase().match(/iphone/) || navigator.userAgent.toLowerCase().match(/ipad/)) {
+            document.write('<script charset="utf-8" src="dev/vendor/facebook-js-sdk-old.js"><\/script>');
+        }else{
+            document.write('<script charset="utf-8" src="dev/vendor/facebook-js-sdk.js"><\/script>');
+        }
+    </script>
+    <script type="text/javascript" charset="utf-8" src="dev/vendor/cdv-plugin-fb-connect.js"></script>
+
+
+  </head>
+  <body>
+    <!-- Javascript Libraries -->
+    <script src="dev/vendor/jquery.js" type="text/javascript"></script>
+    <script src="dev/vendor/jquery.validate.js" type="text/javascript"></script>
+    <script src="dev/vendor/additional-methods.js" type="text/javascript"></script>
+    <script src="dev/vendor/gmap3.min.js" type="text/javascript"></script>
+
+    <script src="dev/vendor/clank.js" type="text/javascript"></script>
+    <script src="dev/vendor/handlebars.js" type="text/javascript"></script>
+
+    <script src="dev/vendor/pageslider.js" type="text/javascript"></script>
+    <script src="dev/vendor/underscore.js" type="text/javascript"></script>
+    <script src="dev/vendor/backbone.js" type="text/javascript"></script>
+    <script src="dev/vendor/backbone.autocomplete.js" type="text/javascript"></script>
+    <script src="dev/vendor/pageslider.js" type="text/javascript"></script>
+    <script src="dev/vendor/prototype.js" type="text/javascript"></script>
+
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+    <link href="http://code.google.com/apis/maps/documentation/javascript/examples/default.css" rel="stylesheet" type="text/css" />
+
+    <script src="public/js/main.js" type="text/javascript" ></script>
+  </body>
+</html>

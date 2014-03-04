@@ -1,0 +1,48 @@
+<div class="cl-page" id="activityDetail">
+  <div class="cl-bar-title">
+    <a href="javascript:;" class="cl-btn" data-transition="slide-out" id="backButton">
+      <i class="entypo-icon">&#59237;</i>
+    </a>
+    <div class="cl-title"><%= title %></div>
+    <a href="javascript:;" class="cl-btn" data-transition="slide-out" id="searchButton">
+      <i class="entypo-icon">&#59157;</i>
+    </a>
+  </div>
+
+  <div class="cl-content" style="overflow: scroll;">
+
+    <div id="editPanel" class="hide">
+      <a href="#">Wijzig deze activiteit</a>
+    </div>
+
+  	<div id="activity-header">
+
+      <div id="activityMap">
+
+      </div>
+
+      <div id="activityInfo">
+
+        <span>
+          <%= location %> 
+        </span>
+        
+        <a id="navigateButton" href="javascript:;">Navigeer</a>
+
+      </div>
+  	</div>
+
+    <div class="cl-btn-toolbar flex" id="activityDetailTabs">
+      <a data="#praktischContent" class="cl-btn active">Praktisch</a>
+      <a data="#mediaContent" class="cl-btn">Media</a>
+      <a data="#messagesContent" class="cl-btn">Berichten</a>
+    </div>
+
+    <div id="activityContent">
+
+    </div>
+
+
+  </div>
+</div>
+

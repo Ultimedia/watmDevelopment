@@ -1,0 +1,561 @@
+@import "compass/reset";
+@import "compass";
+
+/* apply a natural box layout model to all elements */
+*, *:before, *:after {
+    -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+    -webkit-tap-highlight-color: rgba(0,0,0,0); /* make transparent link selection, adjust last value opacity 0 to 1.0 */
+}
+
+body {
+    -webkit-touch-callout: none;                /* prevent callout to copy image, etc when tap to hold */
+    -webkit-text-size-adjust: none;             /* prevent webkit from resizing text to fit */
+    -webkit-user-select: none;                  /* prevent copy paste, to allow, change 'none' to 'text' */
+    background-color:#E4E4E4;
+    background-image:linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-ms-linear-gradient(top, #A7A7A7 0%, #E4E4E4 51%);
+    background-image:-webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #A7A7A7),
+        color-stop(0.51, #E4E4E4)
+    );
+    background-attachment:fixed;
+    font-family:'HelveticaNeue-Light', 'HelveticaNeue', Helvetica, Arial, sans-serif;
+    font-size:12px;
+    height:100%;
+    margin:0px;
+    padding:0px;
+    width:100%;
+}
+
+
+form .cl-btn{
+  width: 100% !important;
+}
+
+
+/**
+ * Styles to fix the new iOS 7 transparent status bar
+ */
+#ios7statusbar {
+    width:100%;
+    height:20px;
+    background-color:white;
+    position:fixed;
+    z-index:10000;
+}
+.ios7 .ui-page, .ios7 .ui-header, .ios7 .ui-pane {
+    margin-top: 20px;
+}
+
+
+#activity-header{
+	height: 200px;
+	width: 100%;
+	position: relative;
+}
+
+#activityMap, #map{
+  height: 200px;
+  width: 100%;
+}
+
+#activityInfo{
+	height: 40px;
+	width: 100%;
+	background: rgba(55,55,55,0.9);
+	position: absolute;
+	bottom: 0;
+	color: #fff;
+	padding: 0 5px;
+}
+
+#activityInfo span{
+	float: left;
+}
+
+#activityInfo #navigateButton{
+	padding: 10px;
+	margin-top: 2px;
+}
+
+#activityTable .cl-table-cell h3, #profileTable .cl-table-cell h3{
+  margin: 5px 0;
+}
+
+#activityTable .cl-table-cell ul, #profileTable .cl-table-cell ul{
+  padding-left: 0;
+  margin: 0;
+}
+
+#activityTable .cl-table-cell ul li, #profileTable .cl-table-cell ul li{
+  display: inline-block;
+  background: #bfbfbf;
+  padding: 1px 4px;
+  font-size: 12px;
+  margin-bottom: 1px;
+}
+
+#activityTable .cl-table-cell{
+	margin-top: 0px;
+}
+
+#activityTable .cl-table-cell ul li .entypo-icon, #profileTable .cl-table-cell ul li .entypo-icon{
+  font-size: 22px;
+}
+
+#sortBar p, #searchBar p{
+  float: left;
+}
+
+#searchBar{
+	padding: 10px;
+	height: auto;
+	background: #757575 !important;
+}
+#searchForm input[type=search]{
+	border: 0;
+	width: 100%;
+	border-radius: 0;
+	padding: .8em .6em .8em .6em;
+	font-size: 1em;
+	border: 0;
+	display: block;
+	height: 2.5em;
+}
+
+
+#sortBar select{
+  width: 170px;
+  margin-top: 12px;
+}
+
+.entypo-icon{
+  font-size: 3em;
+  font-family: 'EntypoRegular';
+  font-style: inherit;
+}
+
+
+/* ios specific */
+.cl-bar-title{
+	height: 68px;
+}
+
+
+.cl-bar-title .cl-title, .cl-modal .cl-modal-bar-title .cl-title, .cl-modal .cl-modal-bar-title .cl-modal-title{
+	line-height: 80px;
+}
+
+.cl-bar-title a{
+  display: inline-block;
+}
+
+.cl-bar-title > .cl-title + .btn, .cl-modal .cl-modal-bar-title > .cl-title + .btn, .cl-modal .cl-modal-bar-title .cl-bar-title > .cl-modal-title + .btn, .cl-modal .cl-modal-bar-title > .cl-modal-title + .btn, .cl-bar-title > .cl-btn:last-child, .cl-modal .cl-modal-bar-title > .cl-btn:last-child, .cl-bar-footer > .cl-title + .btn, .cl-modal .cl-modal-bar-title .cl-bar-footer > .cl-modal-title + .btn, .cl-bar-footer > .cl-btn:last-child, .cl-bar > .cl-title + .btn, .cl-modal .cl-modal-bar-title .cl-bar > .cl-modal-title + .btn, .cl-bar > .cl-btn:last-child {
+  top: 20px;
+}
+
+.cl-bar-title > .cl-btn, .cl-modal .cl-modal-bar-title > .cl-btn, .cl-bar-footer > .cl-btn, .cl-bar > .cl-btn{
+	top: 20px;
+}
+
+
+
+#navigateButton{
+	display: inline-block;
+	background: #fff;
+	float: right;
+}
+
+#activityContent{
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#activityContent h4{
+	display: inline-block;
+	width: 80px;
+}
+
+#createActivity .cl-btn-toolbar .cl-btn,
+#activityDetail .cl-btn-toolbar .cl-btn,
+#activityDetail .cl-btn-toolbar.flex .cl-btn:nth-child(2):not(:last-child),
+#profile .cl-btn-toolbar .cl-btn,
+#navigationView .cl-btn-toolbar .cl-btn{
+	border-radius: 0;
+	margin-right: 0;
+	padding: 5px 0;
+	margin: 0;
+}
+
+#activityDetail .cl-btn-toolbar .cl-btn.active, #navigationTabs .cl-btn-toolbar .cl-btn.active{
+	background: #eeeeee;
+	color: #000000;
+}
+
+#activityDetail .cl-btn-toolbar.flex{
+	padding: 0;
+}
+
+#activityDetail hr{
+	background-color:#fff;
+	border:#000 1px dotted;
+	border-style: none none dotted;
+	color:#fff;
+}
+
+#praktischContent ul{
+	display: inline-block;
+	padding-left: 0;
+}
+
+#praktischContent ul li{
+	display: inline-block;
+}
+
+#praktischContent ul li{
+	border: 1px solid #5b5b5b;
+	padding: 5px;
+}
+
+#activityDetailTabs{
+	margin-bottom: 10px;
+}
+
+#availibleBar .cl-btn{
+	background: #c68436;
+}
+
+#availibleBar .cl-btn:first-child{
+	background: #af7633;
+}
+
+#createActivityTabs, #navigationTabs{
+	margin: 0;
+	padding: 0;
+}
+
+#createActivityTabs .active, #profileTabs .active, #navigationTabs .active{
+	background: #eeeeee;
+	color: #000000;
+}
+
+#profile .cl-btn-toolbar.flex{
+	padding: 0;
+}
+
+#home .cl-content{
+	padding-top: 10px;
+}
+
+#addMediaButton{
+	width: 100%;
+}
+
+#smallImage{
+	max-width: 100%;
+}
+
+#map_canvas, #googleMap{
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+/* Create new user page */
+#createUserForm .error, #loginForm .error{
+
+}
+
+#createUserForm label.error, #loginForm label.error, #watForm label.error{
+	background: red;
+	display: block;
+	padding: 10px;
+	margin-bottom: 15px;
+	margin-top: 5px;
+	color: #fff;
+}
+
+#createUserForm input.error, #loginForm input.error{
+	margin-bottom: 0;
+}
+
+
+/* Login page */
+.error-box{
+	background: red;
+	display: block;
+	padding: 10px;
+	margin-bottom: 15px;
+	margin-top: 5px;
+	color: #fff;
+}
+
+.error-box.hide{
+	display: none;
+}
+.error-box.show{
+	display: block;
+}
+
+
+#FBloginButton{
+  margin-bottom: 10px;
+}
+
+/**
+* Pageslider
+*/
+#container {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.page {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.page.page-left {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+}
+
+.page.page-center {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+}
+
+.page.page-right {
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+}
+
+.page.transition {
+    -webkit-transition-duration: .25s;
+    transition-duration: .25s;
+}
+
+
+/**
+* Backbone autocomplete
+*/
+ul.autocomplete {
+    display: none;
+    position: absolute;
+    background-color: #f8f8f8;
+    margin: 0;
+    padding: 3px 0;
+    width: 100% !important;
+    z-index: 1000;
+}
+
+ul.autocomplete li {
+    list-style: none;
+    margin: 0;
+    padding: 5px 7px;
+}
+
+ul.autocomplete li.active, ul.autocomplete li:hover {
+    cursor: pointer;
+    background-color: #d3d3d3;
+}
+
+ul.autocomplete li a {
+    color: #3d3d3d;
+    text-decoration: none;
+}
+
+
+
+#loading{
+  background: #258dc8; /* Old browsers */
+background: -moz-linear-gradient(top,  #258dc8 0%, #258dc8 100%); /* FF3.6+ */
+background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#258dc8), color-stop(100%,#258dc8)); /* Chrome,Safari4+ */
+background: -webkit-linear-gradient(top,  #258dc8 0%,#258dc8 100%); /* Chrome10+,Safari5.1+ */
+background: -o-linear-gradient(top,  #258dc8 0%,#258dc8 100%); /* Opera 11.10+ */
+background: -ms-linear-gradient(top,  #258dc8 0%,#258dc8 100%); /* IE10+ */
+background: linear-gradient(to bottom,  #258dc8 0%,#258dc8 100%); /* W3C */
+filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#258dc8', endColorstr='#258dc8',GradientType=0 ); /* IE6-9 */
+display:table;
+}
+
+#loading h2{
+  display: table-cell;
+  text-align: center;
+  color: #fff;
+  height: 100%;
+  vertical-align:middle;
+  font-size: 2em;
+}
+
+#loading h2 small{
+  font-size: 0.6em;
+}
+
+.align-center{
+  text-align: center;
+}
+
+.cl-message{
+  padding: 10px;
+  background-color: #c3c3c3;
+}
+
+
+.field > span {
+    display: block;
+    overflow: hidden;
+    padding-right: 10px
+}
+.field input[type=text] {
+    width: 100%
+}
+.field input[type=button] {
+    float: right
+}
+
+.message{
+
+  margin: 0 0 15px 0;
+
+  .messageHeader{
+    display: block;
+  }
+
+   .messageHeader img, .messageHeader h3{
+    float: left;
+  }
+
+  .messageHeader h3{
+    font-size: 1.2em;
+  }
+
+  .messageHeader img{
+    width: 40px;
+    height: 40px;
+    display: block;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+  }
+
+  .messageBody{
+    clear:both;
+  }
+}
+
+
+#challengesList{
+
+    .cl-table-cell{
+      padding: 10px;
+    }
+
+    h3{
+      font-size: 1.2em;
+    }
+
+    .badge_img{
+      float: left;
+    }
+
+    .status{
+    display: block;
+    }
+}
+
+
+#friendsListView{
+ div{
+ float: left;
+ }
+
+ div, .friendsBox{
+    display: inline-block;
+  }
+}
+
+
+/* Page specific */
+#home{
+
+  .cl-bar-title{
+    height: 140px;
+    display: table;
+  }
+
+  .cl-title{
+  display: table-cell;
+  vertical-align: middle;
+  }
+}
+
+#dashboard{
+
+    #sortBar{
+      background: #8d7069;
+    }
+}
+
+#waarContent{
+  #map_canvas{
+    height: 400px;
+  }
+}
+
+
+#navigationView{
+  #map_canvas{
+    height: 50%;
+  }
+
+  #directions{
+  height: 50%;
+  }
+}
+
+#favouriteSportList{
+    display: table;
+
+  div{
+    float: left;
+    display: table-cell;
+        vertical-align: middle;
+
+      a{
+        min-width: 70px;
+        min-height: 70px;
+        background: #d2d2d2;
+        margin: 10px;
+        padding: 5px;
+        float: left;
+        text-align: center;
+        font-size: 12px;
+      }
+
+      a.selected{
+        background: #fff;
+      }
+    }
+}
+
+#favouriteSportsSelector{
+  #confirm{
+    top: 0;
+  }
+
+  ul.autocomplete{
+    position: absolute;
+  }
+}
